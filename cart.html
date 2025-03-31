@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url(background\ image\ 1.jpg);
+        }
+        .cart-container {
+            width: 60%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .total {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #c82333;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+        .remove-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .remove-btn:hover {
+            background-color: #c82333;
+        }
+        .clear-btn {
+            background-color: #ff9800;
+            color: white;
+            margin-top: 20px;
+        }
+        .clear-btn:hover {
+            background-color: #e68900;
+        }
+        h1 {
+            font-size: 30px;
+            color:#28a745;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .home-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+.home-btn:hover {
+    background-color: #218838;
+}
+
+    </style>
+    <h1>Your Cart</h>
+
+    <div class="cart-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Package Name</th>
+                    <th>Price (₹)</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+        </table>
+
+        <p class="total">Total Packages: <span id="total-items">0</span></p>
+        <p class="total">Total Price: ₹<span id="total-price">0</span></p>
+
+        <button class="btn clear-btn" onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartTable = document.getElementById("cart-items");
+            let totalItems = document.getElementById("total-items");
+            let totalPrice = document.getElementById("total-price");
+            
+            cartTable.innerHTML = "";  
+            let sumTotal = 0;
+
+            cart.forEach((item, index) => {
+                let row = cartTable.insertRow();
+                row.insertCell(0).innerText = item.name;
+                row.insertCell(1).innerText = "₹" + item.price;
+                
+                let removeBtn = document.createElement("button");
+                removeBtn.innerText = "Remove";
+                removeBtn.className = "btn remove-btn";
+                removeBtn.onclick = function() { removeFromCart(index); };
+                row.insertCell(2).appendChild(removeBtn);
+
+                sumTotal += item.price;
+            });
+
+            totalItems.innerText = cart.length;
+            totalPrice.innerText = sumTotal;
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            loadCart();
+        }
+
+        function clearCart() {
+            localStorage.removeItem("cart");
+            loadCart();
+        }
+
+        window.onload = loadCart;
+    </script>
+      <div>
+        <a href="index.html" class="home-btn">🏠 Go to Home</a>
+        </div>
+</body>
+</html>

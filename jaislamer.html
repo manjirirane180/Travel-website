@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaipur Travel Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 40px;
+            color:#730402;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .image-text {
+            margin-top: 10px;
+            font-size: 30px;
+            color: #730402;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <a href="index.html">
+                <img src="jaisalmer cultural map.jpeg" alt="Main Page" style="width: 1000px; height: 600px; display: block;">
+            </a>
+        </div>
+      <!-- Video Section -->
+  <div style="display: flex; justify-content: center; margin-top: 20px;">
+    <video width="900" height="450" controls>
+        <source src="jaisalmer video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div> 
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <img src="2 Day Itinerary in Jaisalmer.jpeg" alt="Left Image" 
+                style="width: 500px; height: 450px; margin-left: 0;">
+                
+                <div>
+                    <p style="margin-left: 20px; font-size: 20px; max-width: 300px; text-align: justify;">
+                        <br><b>2-Day Jaisalmer Itinerary</b>
+                
+                        <br>Explore the golden city of Jaisalmer with this perfect 2-day itinerary, covering its grand forts, havelis, and desert adventures.
+                
+                        <br><b>Day 1:</b> Start with a visit to the majestic Jaisalmer Fort, a living fort bustling with shops and temples. Explore the intricately designed Patwon Ki Haveli and Nathmal Ki Haveli. Enjoy lunch at a rooftop café with a view of the golden city. In the evening, head to Gadisar Lake for a serene sunset boat ride.
+                
+                        <br><b>Day 2:</b> Embark on a thrilling desert safari in the Sam Sand Dunes. Enjoy an adventurous camel ride, witness the mesmerizing sunset, and experience a traditional Rajasthani cultural night with folk dance and music under the stars.
+                    </p>
+                </div>
+        </div>
+                <div style="display: flex; align-items: center; justify-content: flex-end; margin-top: 20px;">
+                    <p style="margin-right: 20px; font-size: 20px; max-width: 300px; text-align: justify;">
+                        <b>3-Day Jaisalmer Itinerary</b>
+                
+                        <br>Immerse yourself in the rich heritage and desert magic of Jaisalmer with this extended 3-day itinerary.
+                
+                        <br><b>Day 1:</b> Begin your journey at Jaisalmer Fort and explore the vibrant old town. Visit Patwon Ki Haveli and marvel at its intricate architecture. In the evening, take a boat ride at Gadisar Lake and enjoy a peaceful sunset.
+                
+                        <br><b>Day 2:</b> Spend the day at Kuldhara, the abandoned village with mysterious legends. Later, venture into the Thar Desert for a camel safari and desert camping experience, complete with cultural performances and a delicious Rajasthani dinner.
+                
+                        <br><b>Day 3:</b> Explore the grand Bada Bagh cenotaphs and the stunning Jain Temples inside Jaisalmer Fort. Relax at a rooftop café and indulge in local delicacies before bidding farewell to this golden paradise.
+                    </p>
+                    <img src="The Ultimate 3 Days in Jaisalmer Itinerary.jpeg" alt="Jaisalmer Itinerary Image" style="width: 500px; height: 450px; margin-right: 0;">
+                </div>
+                
+           
+                    
+</div>          
+
+    <style>
+        /* Styling for the main container */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Styling for the heading */
+        h1 {
+            font-size: 40px;
+            color:#730402;  /* Brown */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        }
+
+        /* Flex container for the packages */
+        .package-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Styling for package cards */
+        .package {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Image styling */
+        .package img {
+            width: 500px;
+            height: 450px;
+            border-radius: 10px;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        /* Hover effect on image */
+        .package:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Hover effect on package box */
+        .package:hover {
+            transform: translateY(-10px);
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Select Button Styling */
+        .select-btn {
+            margin-top: 15px;
+            background-color: brown;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        /* Button Hover Effect */
+        .select-btn:hover {
+            background-color: #5a2d0c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Attractive Heading -->
+    <h1>Select Your Package</h1>
+
+    <!-- Packages Container -->
+    <div class="package-container">
+        
+        <!-- Package 1 -->
+        <div class="package">
+            <img src="2 day jaisalmer.jpg" alt="Package 1">
+            <br>
+            <button class="select-btn">Select</button>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="package">
+            <img src="3 day jaisalmer.jpg" alt="Package 2">
+            <br>
+            <button class="select-btn">Select</button>
+        </div>
+
+    </div>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .terms-footer {
+                background-color: #730402;
+                color:white;
+                padding: 20px;
+                text-align: center;
+                font-size: 14px;
+                border-top: 2px solid #ddd;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+            }
+            .terms-footer h3 {
+                margin-bottom: 10px;
+            }
+            .terms-footer p {
+                margin: 5px 0;
+            }
+        </style>
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 40px;
+            color:#730402;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+        }
+        .gallery img {
+            width: 400px;
+            height: 400px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .image-text {
+            margin-top: 10px;
+            font-size: 30px;
+            color: #730402;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attractions of Jaisalmer</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Jaisalmer,India.jpeg" alt="Hawa Mahal" onclick="openModal(this)">
+            <p class="image-text">Jaisalmer fort</p>
+        </div>
+        <div class="gallery-item">
+            <img src="jaisalmer market.jpeg" alt="City Palace" onclick="openModal(this)">
+            <p class="image-text">Jaisalmer Market</p>
+        </div>
+        <div class="gallery-item">
+            <img src="The gadisar lake, jaisalmer.jpeg" alt="Amer Fort" onclick="openModal(this)">
+            <p class="image-text">Gadisar Lake</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Sam Sand Dunes.jpeg" alt="Panna Meena Ka Kund" onclick="openModal(this)">
+            <p class="image-text">Sam Sand Dunes</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Jaisalmer Desert Camp 🏕️.jpeg" alt="Albert Hall" onclick="openModal(this)">
+            <p class="image-text">Desert Camp</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Kuldhara.jpeg" alt="Jal Mahal" onclick="openModal(this)">
+            <p class="image-text">Kuldhara</p>
+        </div>
+    </div>
+
+    <div class="modal" id="imageModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg">
+    </div>
+
+    <script>
+        function openModal(image) {
+            document.getElementById("imageModal").style.display = "flex";
+            document.getElementById("modalImg").src = image.src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+        window.onload = function () {
+            document.getElementById("imageModal").style.display = "none";
+        };
+    </script>
+
+ <div class="terms-footer">
+            <h3>Terms & Conditions</h3>
+            <p><strong>2-Day Travel Package:</strong> Includes accommodation and guided tour. Meals not included.</p>
+            <p><strong>3-Day Travel Package:</strong> Includes accommodation, guided tour, and breakfast. Other meals not included.</p>
+            <p><strong>Note:</strong> Personal shopping and extra expenses are not covered.</p><br>Contact:222444333
+            <div>
+                <a href="index.html" class="home-btn">🏠 Go to Home</a>
+                </div>
+        </div>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const buttons = document.querySelectorAll(".select-btn");
+        
+                buttons.forEach((button, index) => {
+                    button.addEventListener("click", function () {
+                        localStorage.setItem("selectedPackage", `Package ${index + 1}`);
+                        window.location.href = "select button.html"; // Redirect to select_button.html
+                    });
+                });
+            });
+        </script>
+        
+        
+
+ </body>   
+</html>

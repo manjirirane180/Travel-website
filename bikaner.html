@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaipur Travel Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 40px;
+            color:#730402;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .image-text {
+            margin-top: 10px;
+            font-size: 30px;
+            color: #730402;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <a href="index.html">
+                <img src="bikaner map 2.jpg" alt="Main Page" style="width: 1000px; height: 600px; display: block;">
+            </a>
+        </div>
+      <!-- Video Section -->
+  <div style="display: flex; justify-content: center; margin-top: 20px;">
+    <video width="900" height="450" controls>
+        <source src="bikaner video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div> 
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <img src="2 day stay bikaner.jpg" alt="Left Image" 
+                style="width: 500px; height: 450px; margin-left: 0;">
+                
+                    <div>
+                        <p style="margin-left: 20px; font-size: 20px; max-width: 300px; text-align: justify;">
+                            <br><b>2-Day Bikaner Itinerary</b>
+                
+                            <br>Explore the royal city of Bikaner in two days, discovering its grand forts, temples, and rich heritage.
+                
+                            <br><b>Day 1:</b> Start with Junagarh Fort, known for its impressive architecture. Visit the Karni Mata Temple, famous for its sacred rats. Explore the Rampuria Havelis, showcasing intricate craftsmanship. In the evening, enjoy camel rides and a desert sunset at the Sand Dunes near Bikaner.
+                
+                            <br><b>Day 2:</b> Visit the grand Laxmi Niwas Palace and explore Gajner Palace by the lakeside. Stroll through Bhandasar Jain Temple, known for its stunning frescoes. End your trip at Bikaner’s bustling markets, shopping for handicrafts and Bikaneri snacks.
+                        </p>
+                    </div>
+        </div>
+                    <div style="display: flex; align-items: center; justify-content: flex-end; margin-top: 20px;">
+                        <p style="margin-right: 20px; font-size: 20px; max-width: 300px; text-align: justify;">
+                            <b>3-Day Bikaner Itinerary</b>
+                
+                            <br>Experience Bikaner’s royal heritage, vibrant culture, and desert charm with this 3-day plan.
+                
+                            <br><b>Day 1:</b> Explore the magnificent Junagarh Fort and its grand palaces. Visit the sacred Karni Mata Temple, then admire the stunning Rampuria Havelis. In the evening, witness a desert sunset with camel safaris.
+                
+                            <br><b>Day 2:</b> Start at Laxmi Niwas Palace and Gajner Palace. Explore Bhandasar Jain Temple’s intricate frescoes. Visit the National Research Centre on Camel to learn about camel breeding.
+                
+                            <br><b>Day 3:</b> Discover Bikaner’s vibrant markets, famous for snacks and crafts. Visit Shiv Bari Temple, known for its red sandstone structure. End your journey with a relaxing evening at Gajner Lake, soaking in the serene views.
+                        </p>
+                        <img src="3 day stay bikaner.jpg" alt="Bikaner Itinerary Image" style="width: 500px; height: 450px; margin-right: 0;">
+                    </div>
+                    
+</div>          
+
+    <style>
+        /* Styling for the main container */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Styling for the heading */
+        h1 {
+            font-size: 40px;
+            color:#730402;  /* Brown */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        }
+
+        /* Flex container for the packages */
+        .package-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Styling for package cards */
+        .package {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Image styling */
+        .package img {
+            width: 500px;
+            height: 450px;
+            border-radius: 10px;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        /* Hover effect on image */
+        .package:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Hover effect on package box */
+        .package:hover {
+            transform: translateY(-10px);
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Select Button Styling */
+        .select-btn {
+            margin-top: 15px;
+            background-color: brown;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        /* Button Hover Effect */
+        .select-btn:hover {
+            background-color: #5a2d0c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Attractive Heading -->
+    <h1>Select Your Package</h1>
+
+    <!-- Packages Container -->
+    <div class="package-container">
+        
+        <!-- Package 1 -->
+        <div class="package">
+            <img src="bikaner 2 day stay.jpg" alt="Package 1">
+            <br>
+            <button class="select-btn">Select</button>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="package">
+            <img src="bikaner 3 day stay.jpg" alt="Package 2">
+            <br>
+            <button class="select-btn">Select</button>
+        </div>
+
+    </div>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .terms-footer {
+                background-color: #730402;
+                color:white;
+                padding: 20px;
+                text-align: center;
+                font-size: 14px;
+                border-top: 2px solid #ddd;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+            }
+            .terms-footer h3 {
+                margin-bottom: 10px;
+            }
+            .terms-footer p {
+                margin: 5px 0;
+            }
+        </style>
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 40px;
+            color:#730402;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+        }
+        .gallery img {
+            width: 400px;
+            height: 400px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .image-text {
+            margin-top: 10px;
+            font-size: 30px;
+            color: #730402;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attractions of Bikaner</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Rampuria Haveli.jpeg" alt="Hawa Mahal" onclick="openModal(this)">
+            <p class="image-text">Rampuria Haveli</p>
+        </div>
+        <div class="gallery-item">
+            <img src="junagad fort.jpeg" alt="City Palace" onclick="openModal(this)">
+            <p class="image-text">Junagad Fort</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Gajner Palace, Bikaner.jpeg" alt="Amer Fort" onclick="openModal(this)">
+            <p class="image-text">Gajner Palace</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Bhandasar Jain Temple.jpeg" alt="Panna Meena Ka Kund" onclick="openModal(this)">
+            <p class="image-text">Bhandasar Jain Temple</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Devi Kund Sagar_ The Beautiful Royal Cenotaphs of Bikaner - Travel With CG.jpeg" alt="Albert Hall" onclick="openModal(this)">
+            <p class="image-text">Devi Kund Sagar</p>
+        </div>
+        <div class="gallery-item">
+            <img src="This temple is the most famous one of Maa Karni and one of the most important tourist attractions of Bikaner_ There are several unusual features of this place including rats who are considered sacred and incarnated_.jpeg" alt="Jal Mahal" onclick="openModal(this)">
+            <p class="image-text">Karni Mata Temple</p>
+        </div>
+    </div>
+
+    <div class="modal" id="imageModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg">
+    </div>
+
+    <script>
+        function openModal(image) {
+            document.getElementById("imageModal").style.display = "flex";
+            document.getElementById("modalImg").src = image.src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+        window.onload = function () {
+            document.getElementById("imageModal").style.display = "none";
+        };
+    </script>
+
+ <div class="terms-footer">
+            <h3>Terms & Conditions</h3>
+            <p><strong>2-Day Travel Package:</strong> Includes accommodation and guided tour. Meals not included.</p>
+            <p><strong>3-Day Travel Package:</strong> Includes accommodation, guided tour, and breakfast. Other meals not included.</p>
+            <p><strong>Note:</strong> Personal shopping and extra expenses are not covered.</p><br>Contact:222444333
+            <div>
+                <a href="index.html" class="home-btn">🏠 Go to Home</a>
+                </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const buttons = document.querySelectorAll(".select-btn");
+        
+                buttons.forEach((button, index) => {
+                    button.addEventListener("click", function () {
+                        localStorage.setItem("selectedPackage", `Package ${index + 1}`);
+                        window.location.href = "select button.html"; // Redirect to select_button.html
+                    });
+                });
+            });
+        </script>
+         
+
+ </body>   
+</html>
